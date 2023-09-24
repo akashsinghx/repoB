@@ -1,0 +1,18 @@
+# .github/workflows/python_workflow.yml
+name: Use Reusable Python Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Use Workflow Template
+      uses: akashsinghx/workflow-template/.github/workflows/python_workflow.yml@main
